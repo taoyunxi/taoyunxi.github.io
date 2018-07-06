@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题页面</title>
+<link href="div-tv.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   function resizeVideo() 
+   {
+      var ratio = 16/9;
+      var widthViewPort = $(window).width();
+      var heightViewPort = $(window).height();
+      var width, height;
+      var $player = $('#MediaPlayer1');
+      if (widthViewPort / ratio < heightViewPort)
+      {
+         width = Math.ceil(heightViewPort * ratio);
+         $player.width(width).height(heightViewPort).css({left: (widthViewPort - width) / 2, top: 0});
+      }
+      else
+      {
+         height = Math.ceil(widthViewPort / ratio);
+         $player.width(widthViewPort).height(height).css({left: 0, top: (heightViewPort - height) / 2});
+      }
+   }
+   $(window).on('resize', function() 
+   {
+      resizeVideo();
+   })
+   resizeVideo();
+});
+</script>
+</head>
+<body>
+<div id="container">
+<div id="wb_MediaPlayer1" style="position:absolute;left:970px;top:0px;width:83px;height:46px;z-index:5;">
+<video src="1.mp4" id="MediaPlayer1" autoplay controls>
+</video>
+</div>
+</div>
+<div id="Layer1" style="position:relative;text-align:center;width:100%;height:805px;float:left;clear:left;display:block;z-index:6;">
+<div id="Layer1_Container" style="width:970px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Text1" style="position:absolute;left:262px;top:185px;width:446px;height:75px;z-index:0;">
+<span style="color:#000000;font-family:微软雅黑;font-size:43px;">演示背景动态视频效果</span></div>
+<div id="wb_Text2" style="position:absolute;left:266px;top:188px;width:446px;height:75px;z-index:1;">
+<span style="color:#FFFFFF;font-family:微软雅黑;font-size:43px;">演示背景动态视频效果</span></div>
+<div id="wb_Shape1" style="position:absolute;left:376px;top:614px;width:219px;height:50px;z-index:2;">
+<div id="Shape1"><div id="Shape1_text"><span style="color:#FFFFFF;font-family:宋体;font-size:19px;">兄弟，这里！</span></div></div></div>
+</div>
+</div>
+<div id="Layer2" style="position:relative;text-align:center;width:100%;height:208px;float:left;clear:left;display:block;z-index:7;">
+<div id="Layer2_Container" style="width:970px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Text3" style="position:absolute;left:211px;top:86px;width:573px;height:38px;z-index:3;">
+<span style="color:#FFFFFF;font-family:Arial;font-size:16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. </span><span style="color:#FFFFFF;font-family:宋体;font-size:16px;">全屏宽度-浮动层</span></div>
+</div>
+</div>
+<div id="Layer3" style="position:relative;text-align:center;width:100%;height:208px;float:left;clear:left;display:block;z-index:8;">
+<div id="Layer3_Container" style="width:970px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Text4" style="position:absolute;left:199px;top:86px;width:573px;height:38px;z-index:4;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. </span><span style="color:#000000;font-family:宋体;font-size:16px;">全屏宽度-浮动层</span></div>
+</div>
+</div>
+</body>
+</html>
