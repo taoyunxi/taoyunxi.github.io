@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题页面</title>
+<link href="base.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="transition.min.js"></script>
+<script src="carousel.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.photocollage.min.js"></script>
+<script src="wb.lazyload.min.js"></script>
+<script src="wb.conveyerbelt.min.js"></script>
+<script src="wb.slideshow.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#SlideShow3").bootstrapcarousel({interval:2000});
+   $("#PhotoGallery1 .thumbnail a").hover(function()
+   {
+      var x = $('img', this).offset().left;
+      var y = $('img', this).offset().top + $('img', this).outerHeight() - $('.caption', this).outerHeight();
+      $('.caption', this).offset({top: y, left: x });
+      $('.caption', this).css('width', $('img', this).outerWidth()-0);
+      $('.caption', this).stop().animate({opacity: 0.78},{queue:false, duration:500});
+   }, function()
+   {
+      $('.caption', this).stop().animate({opacity: 0},{queue:false, duration:500});
+   });
+   $("#PhotoCollage2").photocollage({ effect: 'shake', duration: 600, padding: 4, matrix: '2,0,1,0,0,1,1,1,1' });
+   $("#PhotoCollage3").photocollage({ effect: 'drop', duration: 600, padding: 4, matrix: '2,0,1,0,0,1,1,1,1' });
+   $("#RollOver1 a").hover(function(e)
+   {
+      $(this).children("span").stop().fadeTo(500, 0);
+   }, function()
+   {
+      $(this).children("span").stop().fadeTo(500, 1);
+   });
+   var $RollOver2_Large = $('<img style="border-width:0"/>').hide().appendTo('body');
+   $("#RollOver2 a").hover(function(e)
+   {
+      var cx = 592;
+      var cy = 522;
+      var x = $(this).offset().left + $(this).parent().width()/2 - cx/2;
+      var y = $(this).offset().top + $(this).parent().height()/2 - cy/2;
+      $RollOver2_Large.hide();
+      $RollOver2_Large.attr('title', $(this).find('img').attr('title'));
+      $RollOver2_Large.attr('src', 'images/3.jpg').css({
+       'position' : 'absolute',
+       'z-index' : 9000,
+       'left': x,
+       'top' : y,
+       'width': cx,
+       'height': cy,
+      })
+      .stop().show('scale', 600)
+      .one('click', function()
+      {
+        $RollOver2_Large.stop().fadeOut();
+      })
+      .one('mouseout', function()
+      {
+        $RollOver2_Large.stop().hide('scale', 600);
+      });
+   }, function()
+   {
+   });
+   $("#RollOverText1").hover(function()
+   {
+      var y = $(this).height() - $(".caption", this).height();
+      $(".caption", this).css("top", y);
+      $(".caption", this).stop().animate({opacity: 0.60},{queue:false, duration:500});
+   }, function()
+   {
+      $(".caption", this).stop().animate({opacity: 0},{queue:false, duration:500});
+   });
+   $("#SlideShow1").conveyerbelt({speed:3, spacing: 5});
+   $("#SlideShow2").slideshow(
+   {
+      interval: 3000,
+      type: 'sequence',
+      effect: 'none',
+      direction: '',
+      pagination: false,
+      effectlength: 2000
+   });
+   $('img[data-src]').lazyload();
+});
+</script>
+</head>
+<body>
+<div id="wb_SlideShow3" style="position:absolute;left:261px;top:1950px;width:317px;height:200px;z-index:0;">
+<div id="SlideShow3" class="carousel slide">
+<ol class="carousel-indicators">
+<li data-target="#SlideShow3" data-slide-to="0" class="active"></li>
+<li data-target="#SlideShow3" data-slide-to="1"></li>
+</ol>
+<div class="carousel-inner">
+<div class="item active">
+<div class="thumbnails">
+<div class="thumbnail">
+<img class="image" src="images/4.jpg" alt="" title="">
+</div>
+<div class="thumbnail">
+<img class="image" src="images/1.jpg" alt="" title="">
+</div>
+</div>
+</div>
+<div class="item">
+<div class="thumbnails">
+<div class="thumbnail">
+<img class="image" src="images/3.jpg" alt="" title="">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="SlideShow3_back" style="position:absolute;left:4px;top:42%;width:30px;height:30px;z-index:999"><a href="#SlideShow3" data-slide="prev" style="cursor:pointer"><img alt="Back" style="border-style:none" src="images/carousel_back.png"></a></div>
+<div id="SlideShow3_next" style="position:absolute;right:4px;top:42%;width:30px;height:30px;z-index:999"><a href="#SlideShow3" data-slide="next" style="cursor:pointer"><img alt="Next" style="border-style:none" src="images/carousel_next.png"></a></div>
+</div>
+<div id="wb_PhotoGallery1" style="position:absolute;left:1px;top:552px;width:836px;height:152px;z-index:1;">
+<div id="PhotoGallery1">
+   <div class="thumbnails">
+      <div class="thumbnail">
+         <a href="images/3.jpg"><img alt="0999999" src="images/tn_3.png"><div class="caption">0999999<div class="description"><br><br>yyyyyyyyyyyyyyyyyyyyyy</div>
+</div></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/1.jpg"><img alt="" src="images/tn_1.png"><div class="caption"></div></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/4.jpg"><img alt="" src="images/tn_4.png"><div class="caption"></div></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/22.jpg"><img alt="" src="images/tn_22.png"><div class="caption"></div></a>
+      </div>
+      <div class="clearfix visible-col4"></div>
+   </div>
+</div></div>
+<div id="wb_Text1" style="position:absolute;left:0px;top:731px;width:578px;height:17px;z-index:2;">
+<span style="color:#000000;font-family:宋体;font-size:13px;">照库库效果 PhotoGallery1&nbsp; 标题在底部显示</span></div>
+<div id="wb_PhotoGallery2" style="position:absolute;left:0px;top:772px;width:836px;height:197px;z-index:3;">
+<div id="PhotoGallery2">
+   <div class="thumbnails">
+      <div class="thumbnail">
+         <a href="images/3.jpg"><img alt="&#26631;&#39064;&#20027;&#20851;&#38190;&#35789;" src="images/tn_3.png" title="&#26631;&#39064;&#20027;&#20851;&#38190;&#35789;"></a>
+<div class="caption">&#26631;&#39064;&#20027;&#20851;&#38190;&#35789;<div class="description"><br>&#27491;&#25991;&#20869;&#23481;&#31616;&#21333;&#25551;&#36848;</div>
+</div>
+      </div>
+      <div class="thumbnail">
+         <a href="images/1.jpg"><img alt="" src="images/tn_1.png"></a>
+<div class="caption"></div>
+      </div>
+      <div class="thumbnail">
+         <a href="images/4.jpg"><img alt="" src="images/tn_4.png"></a>
+<div class="caption"></div>
+      </div>
+      <div class="thumbnail">
+         <a href="images/22.jpg"><img alt="" src="images/tn_22.png"></a>
+<div class="caption"></div>
+      </div>
+      <div class="clearfix visible-col4"></div>
+   </div>
+</div></div>
+<div id="wb_Text2" style="position:absolute;left:0px;top:1002px;width:836px;height:17px;z-index:4;">
+<span style="color:#000000;font-family:宋体;font-size:13px;">照库库效果 特点： 整体统一设置（列数、背景效果、图片简单描述，鼠标放上停止效果、指定图片链接。</span></div>
+<div id="wb_Image2" style="position:absolute;left:0px;top:2px;width:212px;height:186px;z-index:5;">
+<img src="images/1.png" id="Image2" alt=""></div>
+<div id="wb_Text3" style="position:absolute;left:2px;top:214px;width:761px;height:17px;z-index:6;">
+<span style="color:#000000;font-family:宋体;font-size:13px;">图片 </span><span style="color:#000000;font-family:Arial;font-size:13px;">image</span><span style="color:#000000;font-family:宋体;font-size:13px;">&nbsp; 特点：事件、动画、链接、背景效果、效果滤波器（类似</span><span style="color:#000000;font-family:Arial;font-size:13px;">PS</span><span style="color:#000000;font-family:宋体;font-size:13px;">滤镜多种类效果）</span></div>
+<div id="wb_Image3" style="position:absolute;left:238px;top:2px;width:212px;height:186px;z-index:7;">
+<img src="images/3.png" id="Image3" alt=""></div>
+<div id="wb_Image4" style="position:absolute;left:467px;top:2px;width:212px;height:186px;z-index:8;">
+<img src="images/22.png" id="Image4" alt="" title="&#39532;&#36187;&#21490;"></div>
+<div id="wb_PhotoCollage2" style="position:absolute;left:3px;top:262px;width:209px;height:209px;z-index:9;">
+<div id="PhotoCollage2">
+   <div class="thumbnails">
+      <div class="thumbnail">
+         <a href="images/1.jpg"><img alt="" src="images/1.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/3.jpg"><img alt="" src="images/3.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/4.jpg"><img alt="" src="images/4.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/1.jpg"><img alt="" src="images/1.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/3.jpg"><img alt="" src="images/3.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/4.jpg"><img alt="" src="images/4.jpg"></a>
+      </div>
+   </div>
+</div></div>
+<div id="wb_Text4" style="position:absolute;left:2px;top:491px;width:825px;height:17px;z-index:10;">
+<span style="color:#000000;font-family:宋体;font-size:13px;">照片拼贴画 PhotoCollage2&nbsp; 特点：选择多图片，整体有几个效果，链接等</span></div>
+<div id="wb_PhotoCollage3" style="position:absolute;left:240px;top:262px;width:209px;height:209px;z-index:11;">
+<div id="PhotoCollage3">
+   <div class="thumbnails">
+      <div class="thumbnail">
+         <a href="images/1.jpg"><img alt="" src="images/1.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/3.jpg"><img alt="" src="images/3.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/4.jpg"><img alt="" src="images/4.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/1.jpg"><img alt="" src="images/1.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/3.jpg"><img alt="" src="images/3.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/4.jpg"><img alt="" src="images/4.jpg"></a>
+      </div>
+   </div>
+</div></div>
+<picture id="wb_Picture2" style="position:absolute;left:0px;top:1068px;width:188px;height:165px;z-index:12">
+<img src="images/1.jpg" id="Picture2" alt="" srcset="">
+</picture>
+<div id="wb_Text5" style="position:absolute;left:0px;top:1271px;width:836px;height:17px;z-index:13;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">图片 Picture2&nbsp; 特点：拥用简单类似图像滤镜等效果，简单布局及全屏宽度等。</span></div>
+<div id="RollOver1" style="position:absolute;left:3px;top:1343px;width:195px;height:171px;overflow:hidden;z-index:14">
+<a href="">
+<img class="hover" alt="" src="images/placeholder.gif" data-src="images/3.jpg">
+<span><img alt="" src="images/placeholder.gif" data-src="images/4.jpg"></span>
+</a>
+</div>
+<div id="wb_Text6" style="position:absolute;left:0px;top:1528px;width:836px;height:17px;z-index:15;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">翻转图像 RollOver1&nbsp; 特点：拥二张图片切换效果，上下、剪切、放大、等多种效果。&nbsp; 有CSS3动画</span></div>
+<div id="RollOver2" style="position:absolute;left:247px;top:1343px;width:195px;height:171px;overflow:hidden;z-index:16">
+<a href="">
+<img class="hover" alt="" src="images/4.jpg">
+
+</a>
+</div>
+<div id="RollOverText1" style="overflow:hidden;position:absolute;left:0px;top:1605px;width:198px;height:174px;z-index:17;">
+   <img alt="Title" class="image" src="images/1.jpg">
+   <div class="caption">
+      <div class="title">Title</div>
+      <p class="description">Image description goes here</p>
+      <a class="link" href="http://">More information</a>
+   </div>
+</div>
+<div id="wb_Text7" style="position:absolute;left:0px;top:1821px;width:836px;height:17px;z-index:18;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">翻转图像文本 RollOverText1&nbsp; 特点：重点是文本 一张图片，及翻转文本行为（多种）&nbsp; 有CSS3动画</span></div>
+<div id="RollOverText2" style="overflow:hidden;position:absolute;left:247px;top:1605px;width:198px;height:174px;z-index:19;">
+   <img alt="Title" class="image" src="images/1.jpg"></a>
+   <div class="caption">
+      <div class="title">Title</div>
+      <p class="description">Image description goes here</p>
+      <a class="link" href="http://">More information</a>
+   </div></div>
+<div id="SlideShow1" style="position:absolute;left:0px;top:1973px;width:247px;height:156px;overflow:hidden;z-index:20;">
+<img class="image" src="images/4.jpg" alt="" title="">
+<img class="image" src="images/1.jpg" style="display:none;" alt="" title="">
+<img class="image" src="images/3.jpg" style="display:none;" alt="" title="">
+</div>
+<div id="SlideShow2" style="position:absolute;left:196px;top:1954px;width:0px;height:0px;z-index:21;">
+</div>
+<div id="wb_Text8" style="position:absolute;left:0px;top:2162px;width:836px;height:17px;z-index:22;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">翻转图像文本 SlideShow1&nbsp; 特点：通用类型：序列、随机&nbsp;&nbsp; 传送带、轮播、 背景全屏类几类，参数不一样。 事件、样式</span></div>
+</body>
+</html>
