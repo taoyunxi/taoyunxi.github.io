@@ -1,0 +1,356 @@
+div#container
+{
+   width: 970px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+#Carousel1
+{
+   background-color: #F2F5F7;
+   background-image: none;
+   margin: 64px 0px 0px 0px;
+}
+#wb_Carousel1
+{
+   display: block;
+   float: left;
+   font-size: 0;
+   top: 0 !important;
+}
+#Carousel1 .innerframe
+{
+   position: relative;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   height: 762px;
+   width: 970px;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span
+{
+   background: #FFFFFF;
+}
+#Carousel1 .frame-1
+{
+   background-color: transparent;
+   background-image: url(images/slider2.jpg);
+   background-repeat: repeat;
+   background-position: center bottom;
+   background-size: 100% 100%;
+}
+#Carousel1 .frame-3
+{
+   background-color: #F6F8F7;
+   background-image: none;
+}
+#Carousel1 .frame-4
+{
+   background-color: transparent;
+   background-image: url(images/index_Carousel1_frame4_bkgrnd.png);
+   background-repeat: repeat-x;
+   background-position: left top;
+}
+#wb_LayoutGrid1
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: transparent;
+   background-image: url(images/hd_bg.jpg);
+   background-repeat: repeat-x;
+   background-position: left top;
+   background-size: 包含;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 970px;
+}
+#LayoutGrid1
+{
+   box-sizing: border-box;
+   padding: 2px 0px 2px 0px;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid1 .row
+{
+   margin-right: 0;
+   margin-left: 0;
+}
+#LayoutGrid1 > .row > .col-1, #LayoutGrid1 > .row > .col-2
+{
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 0px;
+   padding-left: 0px;
+   position: relative;
+}
+#LayoutGrid1 > .row > .col-1, #LayoutGrid1 > .row > .col-2
+{
+   float: left;
+}
+#LayoutGrid1 > .row > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 33.33333333%;
+   text-align: left;
+}
+#LayoutGrid1 > .row > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 66.66666667%;
+   text-align: right;
+}
+#LayoutGrid1:before,
+#LayoutGrid1:after,
+#LayoutGrid1 .row:before,
+#LayoutGrid1 .row:after
+{
+   display: table;
+   content: " ";
+}
+#LayoutGrid1:after,
+#LayoutGrid1 .row:after
+{
+   clear: both;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid1 > .row > .col-1, #LayoutGrid1 > .row > .col-2
+{
+   float: none;
+   width: 100%;
+}
+}
+#wb_TextMenu1
+{
+   background-color: transparent;
+   background-image: none;
+   color :#000000;
+   font-family: 微软雅黑;
+   font-weight: normal;
+   font-size: 13px;
+   margin: 20px 0px 10px 0px;
+}
+#wb_TextMenu1 span
+{
+   margin: 0 20px 0 0px;
+}
+#wb_TextMenu1 .active
+{
+   color: #FFFFFF;
+   text-decoration: underline;
+}
+#wb_TextMenu2
+{
+   background-color: transparent;
+   background-image: none;
+   color :#000000;
+   font-family: 微软雅黑;
+   font-weight: normal;
+   font-size: 24px;
+   margin: 14px 0px 12px 0px;
+}
+#wb_TextMenu2 span
+{
+   margin: 0 20px 0 0px;
+}
+#wb_TextMenu2 .active
+{
+   color: #FFFFFF;
+   text-decoration: underline;
+}
+#wb_LayoutGrid2
+{
+   clear: both;
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 7777;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: transparent;
+   background-image: url(images/hd_bg.jpg);
+   background-repeat: repeat-x;
+   background-position: left top;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+}
+#LayoutGrid2
+{
+   box-sizing: border-box;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   padding: 2px 0px 2px 0px;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid2 > .col-1
+{
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#LayoutGrid2
+{
+   width: 970px;
+}
+#LayoutGrid2 > .col-1
+{
+   -webkit-flex: 0 0 auto;
+   flex: 0 0 auto;
+}
+#LayoutGrid2 > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   flex-basis: 100%;
+   max-width: 100%;
+   -webkit-align-self: flex-start;
+   align-self: flex-start;
+   text-align: left;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid2
+{
+   width: 100%;
+}
+#LayoutGrid2 > .col-1
+{
+   -webkit-flex-basis: 100% !important;
+   flex-basis: 100% !important;
+   max-width: 100% !important;
+}
+}
+#Image1
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Image2
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Image3
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Image4
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 div
+{
+   text-align: center;
+   white-space: nowrap;
+}
+#Image5
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Image6
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Image7
+{
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text2 div
+{
+   text-align: left;
+   white-space: nowrap;
+}
